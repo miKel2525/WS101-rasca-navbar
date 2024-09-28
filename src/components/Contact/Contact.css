@@ -1,0 +1,92 @@
+.contact-container {
+    padding: 30px; /* Reduced padding to move content up */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px; /* Space between text and video */
+    max-width: 1200px;
+    width: 100%;
+    margin-bottom:350px;
+}
+
+.contact-text {
+    flex: 1;
+    margin-top: -20px; /* Move the content slightly up */
+    color: white;
+}
+
+.contact-container h1 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    color: #222;
+    font-weight: bolder;
+    color: white;
+
+}
+
+.contact-container p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: whi;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #347928; /* Change color on hover */
+}
+
+.social-icon {
+    margin-right: 10px;
+    font-size: 1.5rem;
+    color: #222;
+}
+
+.contact-video {
+    width: 400px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-video {
+        width: 100%;
+        max-width: 300px;
+        margin-top: 20px;
+    }
+
+    .social-links a {
+        font-size: 1rem;
+    }
+
+    .social-icon {
+        font-size: 1.2rem;
+    }
+}

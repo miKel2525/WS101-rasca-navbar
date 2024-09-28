@@ -1,0 +1,120 @@
+.about-container {
+    text-align: center;
+    padding: 50px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+}
+
+.about-container h2 {
+    margin-top: -200px;  /* Remove or reduce the top margin */
+    padding-top: 5px; /* Optional: Add padding if needed, or reduce it */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    margin-bottom: 50px;
+
+}
+
+
+.recommended-songs {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    width: 100%;
+    margin-bottom: 50px;
+
+}
+
+
+.recommended-songs {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of songs */
+    justify-content: space-between; /* Adjust space between items */
+    gap: 10px; /* Add space between items */
+}
+
+.song-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.song-box a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.song-box h3 {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: black;
+}
+
+
+
+
+.song-cover {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.song-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.song-box:hover .song-cover {
+    transform: scale(1.1);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFD700;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 6px rgba(255, 215, 0, 0.5);
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+.about-image {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.about-text-box {
+    flex-grow: 1;
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-h2 {
+        font-size: 20px; /* Reduce font size on smaller screens */
+    }
+
+    .recommended-songs {
+        flex-direction: column; /* Stack songs vertically */
+    }
+
+    .song-item {
+        width: 100%; /* Full width for song items */
+        box-sizing: border-box; /* Include padding in width */
+    }
+}

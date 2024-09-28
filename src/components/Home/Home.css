@@ -1,0 +1,122 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: black; /* Ensure full black background */
+}
+
+.home-container {
+    margin-top: 20px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* To position button outside relative to this container */
+}
+
+.home-content {
+    max-width: 800px;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.9);
+    animation: popIn 1s ease forwards;
+    position: relative; /* Needed for further positioning */
+}
+
+/* Pop-in effect */
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Adjust the new image (replacing h1 and h2) */
+.ola-image {
+    max-width: 100%; /* Ensure image is responsive */
+    height: auto;
+    position: relative;
+    
+}
+
+/* Adjust the existing olo image */
+.home-image {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    right: -1px; /* Move image to the right */
+}
+
+/* Button Styling */
+.learn-more-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 500px;
+    position: absolute;  /* Position the button outside the box */
+    left: 50%;
+    transform: translateX(-50%); /* Center the button horizontally */
+}
+
+.learn-more-button:hover {
+    background-color: #4a85e5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-container {
+        width: 90vw;
+        height: 60vh;
+        margin-left: 0;
+    }
+
+    .ola-image {
+        left: -10px; /* Adjust for smaller screens */
+    }
+
+    .home-image {
+        right: -10px; /* Adjust for smaller screens */
+    }
+
+    .learn-more-button {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .home-container {
+        width: 100vw;
+        height: 50vh;
+    }
+
+    .ola-image {
+        left: 0; /* Adjust to original position */
+    }
+
+    .home-image {
+        right: 0; /* Adjust to original position */
+    }
+
+    .learn-more-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+        bottom: -40px; /* Adjust button position for smaller screens */
+    }
+}
